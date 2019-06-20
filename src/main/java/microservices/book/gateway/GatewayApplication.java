@@ -3,14 +3,14 @@ package microservices.book.gateway;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.ribbon.RibbonClients;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 import microservices.book.gateway.configuration.RibbonConfiguration;
 
 @EnableZuulProxy
 @EnableEurekaClient
-@RibbonClients(defaultConfiguration = RibbonConfiguration.class)
+@RibbonClient(name = "gateway", configuration = RibbonConfiguration.class)
 @SpringBootApplication
 public class GatewayApplication {
 

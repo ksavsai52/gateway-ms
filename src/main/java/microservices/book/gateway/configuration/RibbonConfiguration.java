@@ -9,7 +9,7 @@ import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.PingUrl;
 
 public class RibbonConfiguration {
-
+	
 	@Bean
 	public IPing ribbonPing(final IClientConfig config) {
 		return new PingUrl(false, "/application/health");
