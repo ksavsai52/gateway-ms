@@ -22,12 +22,6 @@ zuul:
       service-id: gamification
       strip-prefix: false
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
 eureka:
   client:
     service-url:
